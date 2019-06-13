@@ -126,18 +126,18 @@
 
 
 
-  <meta name="description" content="基本概念矩阵即由$n$行$m$列的数字(也可以嵌套矩阵)构成的一个方阵。如:$\begin{bmatrix}1&amp;amp;2\\3&amp;amp;4\end{bmatrix}$，$\begin{bmatrix}a\\b\end{bmatrix}$等都是矩阵。 有一种特殊的矩阵叫做单位矩阵，它相当于数字乘法中的$1$。单位矩阵的行列数相同，且每一个满足$i=j$的数字$a_ij$的值都为1，其他的数字都为$">
+  <meta name="description" content="基本概念矩阵即由$n$行$m$列的数字(也可以嵌套矩阵)构成的一个方阵。如:$\begin{bmatrix}1&amp;amp;2\\3&amp;amp;4\end{bmatrix}$，$\begin{bmatrix}a\\b\end{bmatrix}$等都是矩阵。 有一种特殊的矩阵叫做单位矩阵，它相当于数字乘法中的$1$。单位矩阵的行列数相同，且每一个满足$i=j$的数字$a_{ij}$的值都为1，其他的数字都">
 <meta name="keywords" content="OI,数学">
 <meta property="og:type" content="article">
 <meta property="og:title" content="矩阵加速(数列)">
 <meta property="og:url" content="http://inspiral.coding.me/2019/06/矩阵加速/index.html">
 <meta property="og:site_name" content="Blog">
-<meta property="og:description" content="基本概念矩阵即由$n$行$m$列的数字(也可以嵌套矩阵)构成的一个方阵。如:$\begin{bmatrix}1&amp;amp;2\\3&amp;amp;4\end{bmatrix}$，$\begin{bmatrix}a\\b\end{bmatrix}$等都是矩阵。 有一种特殊的矩阵叫做单位矩阵，它相当于数字乘法中的$1$。单位矩阵的行列数相同，且每一个满足$i=j$的数字$a_ij$的值都为1，其他的数字都为$">
+<meta property="og:description" content="基本概念矩阵即由$n$行$m$列的数字(也可以嵌套矩阵)构成的一个方阵。如:$\begin{bmatrix}1&amp;amp;2\\3&amp;amp;4\end{bmatrix}$，$\begin{bmatrix}a\\b\end{bmatrix}$等都是矩阵。 有一种特殊的矩阵叫做单位矩阵，它相当于数字乘法中的$1$。单位矩阵的行列数相同，且每一个满足$i=j$的数字$a_{ij}$的值都为1，其他的数字都">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-06-13T08:52:28.655Z">
+<meta property="og:updated_time" content="2019-06-13T08:54:07.457Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="矩阵加速(数列)">
-<meta name="twitter:description" content="基本概念矩阵即由$n$行$m$列的数字(也可以嵌套矩阵)构成的一个方阵。如:$\begin{bmatrix}1&amp;amp;2\\3&amp;amp;4\end{bmatrix}$，$\begin{bmatrix}a\\b\end{bmatrix}$等都是矩阵。 有一种特殊的矩阵叫做单位矩阵，它相当于数字乘法中的$1$。单位矩阵的行列数相同，且每一个满足$i=j$的数字$a_ij$的值都为1，其他的数字都为$">
+<meta name="twitter:description" content="基本概念矩阵即由$n$行$m$列的数字(也可以嵌套矩阵)构成的一个方阵。如:$\begin{bmatrix}1&amp;amp;2\\3&amp;amp;4\end{bmatrix}$，$\begin{bmatrix}a\\b\end{bmatrix}$等都是矩阵。 有一种特殊的矩阵叫做单位矩阵，它相当于数字乘法中的$1$。单位矩阵的行列数相同，且每一个满足$i=j$的数字$a_{ij}$的值都为1，其他的数字都">
 
 
 
@@ -396,7 +396,7 @@
                 
               
 
-              <time title="创建时间：2019-06-13 15:01:24 / 修改时间：16:52:28" itemprop="dateCreated datePublished" datetime="2019-06-13T15:01:24+08:00">2019-06-13</time>
+              <time title="创建时间：2019-06-13 15:01:24 / 修改时间：16:54:07" itemprop="dateCreated datePublished" datetime="2019-06-13T15:01:24+08:00">2019-06-13</time>
             
 
             
@@ -471,7 +471,7 @@
 
       
         <h3 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h3><p>矩阵即由$n$行$m$列的数字(也可以嵌套矩阵)构成的一个方阵。如:$\begin{bmatrix}1&amp;2\\3&amp;4\end{bmatrix}$，$\begin{bmatrix}a\\b\end{bmatrix}$等都是矩阵。</p>
-<p>有一种特殊的矩阵叫做<code>单位矩阵</code>，它相当于数字乘法中的$1$。单位矩阵的行列数相同，且每一个满足$i=j$的数字$a_ij$的值都为1，其他的数字都为$0$。如$\begin{bmatrix}1&amp;0&amp;0\\0&amp;1&amp;0\\0&amp;0&amp;1\end{bmatrix}$就是一个$3$行$3$列的单位矩阵。</p>
+<p>有一种特殊的矩阵叫做<code>单位矩阵</code>，它相当于数字乘法中的$1$。单位矩阵的行列数相同，且每一个满足$i=j$的数字$a_{ij}$的值都为1，其他的数字都为$0$。如$\begin{bmatrix}1&amp;0&amp;0\\0&amp;1&amp;0\\0&amp;0&amp;1\end{bmatrix}$就是一个$3$行$3$列的单位矩阵。</p>
 <p>矩阵和数字、矩阵和矩阵之间可以进行一些运算。</p>
 <p>本文将介绍矩阵的几种基本的运算，并利用矩阵来用$O(logn)$的复杂度求出$k$阶常系数线性递推关系数列的第$n$项。</p>
 <h3 id="矩阵运算"><a href="#矩阵运算" class="headerlink" title="矩阵运算"></a>矩阵运算</h3><h4 id="矩阵与数字的运算"><a href="#矩阵与数字的运算" class="headerlink" title="矩阵与数字的运算"></a>矩阵与数字的运算</h4><p>直接用矩阵的每一个数字加减乘除矩阵外的数字即可。</p>
@@ -479,7 +479,7 @@
 <p>设运算得到的矩阵为$C$，则$c_{ij} = a_{ij} \pm b_{ij}$。这里的$\pm$对应了矩阵的加减。</p>
 <p>矩阵的加法满足交换律和结合律。</p>
 <h4 id="矩阵乘法"><a href="#矩阵乘法" class="headerlink" title="矩阵乘法"></a>矩阵乘法</h4><p>设矩阵$A$有$a$行$b$列，矩阵$B$有$c$行$d$列，则仅当满足$b=c$时，两个矩阵才可以相乘。</p>
-<p>设运算得到的矩阵为$C$，则$c_{ij} = \sum\limits_{k = 1}^{b}a_{ik}<em>b_{kj}$。C为$a</em>d$大小的矩阵。</p>
+<p>设运算得到的矩阵为$C$，则$c_{ij} = \sum\limits_{k = 1}^{b}a_{ik}*b_{kj}$。C为$a*d$大小的矩阵。</p>
 <p>矩阵乘法不满足交换律，但满足结合律。</p>
 <h4 id="矩阵快速幂"><a href="#矩阵快速幂" class="headerlink" title="矩阵快速幂"></a>矩阵快速幂</h4><p>由于矩阵乘法满足结合律，我们就可以和数字的快速幂一样，用$O(logk)$的复杂度求出矩阵的$k$次方幂。</p>
 <p>需要注意的是，矩阵的幂运算要求矩阵的行列数相等。</p>
