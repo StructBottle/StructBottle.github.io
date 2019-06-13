@@ -134,7 +134,7 @@
 <meta property="og:site_name" content="Blog">
 <meta property="og:description" content="基本概念矩阵即由$n$行$m$列的数字(也可以嵌套矩阵)构成的一个方阵。如:$\begin{bmatrix}1&amp;amp;2\\3&amp;amp;4\end{bmatrix}$，$\begin{bmatrix}a\\b\end{bmatrix}$等都是矩阵。 有一种特殊的矩阵叫做单位矩阵，它相当于数字乘法中的$1$。单位矩阵的行列数相同，且每一个满足$i=j$的数字$a_{ij}$的值都为1，其他的数字都">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-06-13T09:14:55.383Z">
+<meta property="og:updated_time" content="2019-06-13T09:17:16.102Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="矩阵加速(数列)">
 <meta name="twitter:description" content="基本概念矩阵即由$n$行$m$列的数字(也可以嵌套矩阵)构成的一个方阵。如:$\begin{bmatrix}1&amp;amp;2\\3&amp;amp;4\end{bmatrix}$，$\begin{bmatrix}a\\b\end{bmatrix}$等都是矩阵。 有一种特殊的矩阵叫做单位矩阵，它相当于数字乘法中的$1$。单位矩阵的行列数相同，且每一个满足$i=j$的数字$a_{ij}$的值都为1，其他的数字都">
@@ -396,7 +396,7 @@
                 
               
 
-              <time title="创建时间：2019-06-13 15:01:24 / 修改时间：17:14:55" itemprop="dateCreated datePublished" datetime="2019-06-13T15:01:24+08:00">2019-06-13</time>
+              <time title="创建时间：2019-06-13 15:01:24 / 修改时间：17:17:16" itemprop="dateCreated datePublished" datetime="2019-06-13T15:01:24+08:00">2019-06-13</time>
             
 
             
@@ -485,7 +485,7 @@
 <p>需要注意的是，矩阵的幂运算要求矩阵的行列数相等。</p>
 <p>下面是矩阵快速幂的部分代码示例:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">struct matrix &#123;</span><br><span class="line">    int n, m;</span><br><span class="line">    long long data[3][3];</span><br><span class="line">    matrix() &#123; memset(data, 0, sizeof(data)); &#125;</span><br><span class="line">    matrix(int nv, int mv) &#123;</span><br><span class="line">        n = nv, m = mv;</span><br><span class="line">        memset(data, 0, sizeof(data));</span><br><span class="line">    &#125;</span><br><span class="line">    void build() &#123;             //此函数将自身矩阵初始化为单位矩阵</span><br><span class="line">        for (int i = 1; i &lt;= n; i++) data[i][i] = 1;</span><br><span class="line">    &#125;</span><br><span class="line">    matrix operator * (const matrix &amp;a) const &#123;</span><br><span class="line">        matrix x = matrix(n, a.m);</span><br><span class="line">        for (int i = 1; i &lt;= x.n; i++)</span><br><span class="line">            for (int j = 1; j &lt;= x.m; j++)</span><br><span class="line">                for (int k = 1; k &lt;= m; k++)</span><br><span class="line">                    x.data[i][j] = ((data[i][k] * a.data[k][j]) % mod + x.data[i][j]) % mod;</span><br><span class="line">        return x;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line">matrix fastpow(matrix base, long long k) &#123;         //矩阵快速幂</span><br><span class="line">    matrix ans = matrix(base.n, base.m);</span><br><span class="line">    ans.build();</span><br><span class="line">    while (k) &#123;</span><br><span class="line">        if (k &amp; 1) ans = ans * base;</span><br><span class="line">        base = base * base;</span><br><span class="line">        k &gt;&gt;= 1;</span><br><span class="line">    &#125;</span><br><span class="line">    return ans;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <h3 id="矩阵加速"><a href="#矩阵加速" class="headerlink" title="矩阵加速"></a>矩阵加速</h3><p>线性递推的玄学优化版本，将$O(n)$复杂度的线性递推优化为$O(logn)$。这里之所以说是优化，是因为矩阵加速的实质也是递推，只是形式不同。</p>
-<h4 id="引例"><a href="#引例" class="headerlink" title="引例"></a>引例</h4><p>我们先来看一个非常著名的数列:斐波那契数列。在这个数列中， $F[1]=F[2]=1$ ， $F[n]=F[n-1]+F<a href="n\ge 3">n-2</a>$ 。现在要求出数列的第$n$项， $n$ 在 $long long$ 范围内。<a href="https://www.luogu.org/problemnew/show/P1962" target="_blank" rel="noopener">对应的洛谷题目</a></p>
+<h4 id="引例"><a href="#引例" class="headerlink" title="引例"></a>引例</h4><p>我们先来看一个非常著名的数列:斐波那契数列。在这个数列中， $F[1]=F[2]=1$ ， $F[n]=F[n-1]+F[n-2] (n\ge 3)$ 。现在要求出数列的第$n$项， $n$ 在 $long long$ 范围内。<a href="https://www.luogu.org/problemnew/show/P1962" target="_blank" rel="noopener">对应的洛谷题目</a></p>
 <p>由于$n$比较大，用$O(n)$的递推会超时。我们考虑用矩阵来表示这里的递推关系，即</p>
 <script type="math/tex; mode=display">\begin{bmatrix}F[n]\\F[n-1]\end{bmatrix}=A\times \begin{bmatrix}F[n-1]\\F[n-2]\end{bmatrix}</script><p>这里的$A$是另一个矩阵，它只能由我们推导出来。</p>
 <p>我们由$F[n]=1\times F[n-1]+1\times F[n-2]$，$F[n-1]=1\times F[n-1]+0\times F[n-2]$得出</p>
