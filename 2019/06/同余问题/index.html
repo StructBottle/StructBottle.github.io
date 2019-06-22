@@ -134,7 +134,7 @@
 <meta property="og:site_name" content="Blog">
 <meta property="og:description" content="同余即余数相同，同余问题是$OI$中比较常见的问题。 基本概念整除假设有两个整数$a$和$b$，且满足$ka = b (k \in Z)$，则称$b$整除$a$，记为$a | b$。 取模模数也就是余数。整数$a$除以整数$b$的余数记为$a \bmod b$。 同余若$a\bmod m = b\bmod m$，则$a$与$b$在模$m$意义下同余，记为$a \equiv b \pmod m$。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-06-22T07:16:17.939Z">
+<meta property="og:updated_time" content="2019-06-22T07:18:45.255Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="同余问题">
 <meta name="twitter:description" content="同余即余数相同，同余问题是$OI$中比较常见的问题。 基本概念整除假设有两个整数$a$和$b$，且满足$ka = b (k \in Z)$，则称$b$整除$a$，记为$a | b$。 取模模数也就是余数。整数$a$除以整数$b$的余数记为$a \bmod b$。 同余若$a\bmod m = b\bmod m$，则$a$与$b$在模$m$意义下同余，记为$a \equiv b \pmod m$。">
@@ -396,7 +396,7 @@
                 
               
 
-              <time title="创建时间：2019-06-22 14:20:39 / 修改时间：15:16:17" itemprop="dateCreated datePublished" datetime="2019-06-22T14:20:39+08:00">2019-06-22</time>
+              <time title="创建时间：2019-06-22 14:20:39 / 修改时间：15:18:45" itemprop="dateCreated datePublished" datetime="2019-06-22T14:20:39+08:00">2019-06-22</time>
             
 
             
@@ -487,9 +487,9 @@
 <h4 id="算法原理"><a href="#算法原理" class="headerlink" title="算法原理"></a>算法原理</h4><p><del>证明过程暂时咕咕</del></p>
 <h4 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">void exgcd(int a, int b, int &amp;d, int &amp;x, int &amp;y) &#123;</span><br><span class="line">    if (!b) d = a, x = 1, y = 0;</span><br><span class="line">    else &#123;</span><br><span class="line">      exgcd(b, a % b, d, y, x);</span><br><span class="line">      y -= x * (a / b);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h4 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h4><p>可以用来解同余方程。对于$ax\equiv b\pmod m$，它等价于$ax+my=b$，这个不定方程正好和扩展欧几里得算法求解的不定方程形式相同，因此我们考虑用此算法求解。</p>
-<p>用$exgcd$求出方程$ax+my=\gcd(a,m)$的解，然后我们考虑如何将其转为方程$ax+my=b$。根据我们之前讲到的一个性质，我们在方程左右同时乘$\frac{b}{\gcd(a,m)}$，方程仍然成立，而右边的$\gcd(a,m)$则变为了$b$，于是我们轻而易举得到了方程$\frac{axb}{\gcd(a,m)}+\frac{myb}{\gcd(a,m)}的整数解$。这里的$\frac{axb}{\gcd(a,m)}$和$\frac{myb}{\gcd(a,m)}$就是我们要求的其中一组解。</p>
+<p>用$exgcd$求出方程$ax+my=\gcd(a,m)$的解，然后我们考虑如何将其转为方程$ax+my=b$。根据我们之前讲到的一个性质，我们在方程左右同时乘$\frac{b}{\gcd(a,m)}$，方程仍然成立，而右边的$\gcd(a,m)$则变为了$b$，于是我们轻而易举得到了方程$\frac{axb}{\gcd(a,m)}+\frac{myb}{\gcd(a,m)}=b$的整数解。这里的$\frac{axb}{\gcd(a,m)}$和$\frac{myb}{\gcd(a,m)}$就是我们要求的其中一组解。</p>
 <p>需要注意的是，如果$\gcd(a,m) | b$不成立，则没有上述求解过程，该方程无整数解。反之则有无数组整数解。</p>
-<p>现在我们仅仅是求出了任意的一组解，并不能满足题目的某些要求，比如要求出该方程的最小正整数解，我们直接输出算法求出的解很可能不能满足要求。假设我们已经求出了方程$ax+my=b的一组解，$要在调整解的同时保持方程成立，我们可以用$\frac{m}{\gcd(a,m)}来调整$x$的值，用$\frac{a}{\gcd(a,m)}$来调整$y$的值。</p>
+<p>现在我们仅仅是求出了任意的一组解，并不能满足题目的某些要求，比如要求出该方程的最小正整数解，我们直接输出算法求出的解很可能不能满足要求。假设我们已经求出了方程$ax+my=b$的一组解，要在调整解的同时保持方程成立，我们可以用$\frac{m}{\gcd(a,m)}$来调整$x$的值，用$\frac{a}{\gcd(a,m)}$来调整$y$的值。</p>
 <h3 id="扩展中国剩余定理-excrt"><a href="#扩展中国剩余定理-excrt" class="headerlink" title="扩展中国剩余定理(excrt)"></a>扩展中国剩余定理(excrt)</h3>
       
     </div>
