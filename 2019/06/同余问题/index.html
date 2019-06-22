@@ -126,25 +126,25 @@
 
 
 
-  <meta name="description" content="基本概念矩阵即由$n$行$m$列的数字(也可以嵌套矩阵)构成的一个方阵。如:$\begin{bmatrix}1&amp;amp;2\\3&amp;amp;4\end{bmatrix}$，$\begin{bmatrix}a\\b\end{bmatrix}$等都是矩阵。 有一种特殊的矩阵叫做单位矩阵，它相当于数字乘法中的$1$。单位矩阵的行列数相同，且每一个满足$i=j$的数字$a_{ij}$的值都为1，其他的数字都">
-<meta name="keywords" content="OI,数学">
+  <meta name="description" content="同余即余数相同，同余问题是$OI$中比较常见的问题。 基本概念整除假设有两个整数$a$和$b$，且满足$ka = b (k \in Z)$，则称$b$整除$a$，记为$a | b$。 取模模数也就是余数。整数$a$除以整数$b$的余数记为$a \bmod b$。 同余若$a\bmod m = b\bmod m$，则$a$与$b$在模$m$意义下同余，记为$a \equiv b \pmod m$。">
+<meta name="keywords" content="OI,数论,同余">
 <meta property="og:type" content="article">
-<meta property="og:title" content="矩阵加速(数列)">
-<meta property="og:url" content="http://inspiral.coding.me/2019/06/矩阵加速/index.html">
+<meta property="og:title" content="同余问题">
+<meta property="og:url" content="http://inspiral.coding.me/2019/06/同余问题/index.html">
 <meta property="og:site_name" content="Blog">
-<meta property="og:description" content="基本概念矩阵即由$n$行$m$列的数字(也可以嵌套矩阵)构成的一个方阵。如:$\begin{bmatrix}1&amp;amp;2\\3&amp;amp;4\end{bmatrix}$，$\begin{bmatrix}a\\b\end{bmatrix}$等都是矩阵。 有一种特殊的矩阵叫做单位矩阵，它相当于数字乘法中的$1$。单位矩阵的行列数相同，且每一个满足$i=j$的数字$a_{ij}$的值都为1，其他的数字都">
+<meta property="og:description" content="同余即余数相同，同余问题是$OI$中比较常见的问题。 基本概念整除假设有两个整数$a$和$b$，且满足$ka = b (k \in Z)$，则称$b$整除$a$，记为$a | b$。 取模模数也就是余数。整数$a$除以整数$b$的余数记为$a \bmod b$。 同余若$a\bmod m = b\bmod m$，则$a$与$b$在模$m$意义下同余，记为$a \equiv b \pmod m$。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-06-13T09:17:16.102Z">
+<meta property="og:updated_time" content="2019-06-22T07:16:17.939Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="矩阵加速(数列)">
-<meta name="twitter:description" content="基本概念矩阵即由$n$行$m$列的数字(也可以嵌套矩阵)构成的一个方阵。如:$\begin{bmatrix}1&amp;amp;2\\3&amp;amp;4\end{bmatrix}$，$\begin{bmatrix}a\\b\end{bmatrix}$等都是矩阵。 有一种特殊的矩阵叫做单位矩阵，它相当于数字乘法中的$1$。单位矩阵的行列数相同，且每一个满足$i=j$的数字$a_{ij}$的值都为1，其他的数字都">
+<meta name="twitter:title" content="同余问题">
+<meta name="twitter:description" content="同余即余数相同，同余问题是$OI$中比较常见的问题。 基本概念整除假设有两个整数$a$和$b$，且满足$ka = b (k \in Z)$，则称$b$整除$a$，记为$a | b$。 取模模数也就是余数。整数$a$除以整数$b$的余数记为$a \bmod b$。 同余若$a\bmod m = b\bmod m$，则$a$与$b$在模$m$意义下同余，记为$a \equiv b \pmod m$。">
 
 
 
 
 
 
-  <link rel="canonical" href="http://inspiral.coding.me/2019/06/矩阵加速/">
+  <link rel="canonical" href="http://inspiral.coding.me/2019/06/同余问题/">
 
 
 
@@ -154,7 +154,7 @@
   };
 </script>
 
-  <title>矩阵加速(数列) | Blog</title>
+  <title>同余问题 | Blog</title>
   
 
 
@@ -353,7 +353,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://inspiral.coding.me/2019/06/矩阵加速/">
+    <link itemprop="mainEntityOfPage" href="http://inspiral.coding.me/2019/06/同余问题/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Struct瓶子">
@@ -370,7 +370,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">矩阵加速(数列)
+          <h1 class="post-title" itemprop="name headline">同余问题
 
               
             
@@ -396,7 +396,7 @@
                 
               
 
-              <time title="创建时间：2019-06-13 15:01:24 / 修改时间：17:17:16" itemprop="dateCreated datePublished" datetime="2019-06-13T15:01:24+08:00">2019-06-13</time>
+              <time title="创建时间：2019-06-22 14:20:39 / 修改时间：15:16:17" itemprop="dateCreated datePublished" datetime="2019-06-22T14:20:39+08:00">2019-06-22</time>
             
 
             
@@ -419,6 +419,13 @@
               
               
                 <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/OI/" itemprop="url" rel="index"><span itemprop="name">OI</span></a></span>
+
+                
+                
+                  ，
+                
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/OI/数论/" itemprop="url" rel="index"><span itemprop="name">数论</span></a></span>
 
                 
                 
@@ -446,7 +453,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">4.1k</span>
+                <span title="本文字数">1.2k</span>
               
 
               
@@ -470,28 +477,20 @@
       
 
       
-        <h3 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h3><p>矩阵即由$n$行$m$列的数字(也可以嵌套矩阵)构成的一个方阵。如:$\begin{bmatrix}1&amp;2\\3&amp;4\end{bmatrix}$，$\begin{bmatrix}a\\b\end{bmatrix}$等都是矩阵。</p>
-<p>有一种特殊的矩阵叫做<code>单位矩阵</code>，它相当于数字乘法中的$1$。单位矩阵的行列数相同，且每一个满足$i=j$的数字$a_{ij}$的值都为1，其他的数字都为$0$。如$\begin{bmatrix}1&amp;0&amp;0\\0&amp;1&amp;0\\0&amp;0&amp;1\end{bmatrix}$就是一个$3$行$3$列的单位矩阵。</p>
-<p>矩阵和数字、矩阵和矩阵之间可以进行一些运算。</p>
-<p>本文将介绍矩阵的几种基本的运算，并利用矩阵来用$O(logn)$的复杂度求出$k$阶常系数线性递推关系数列的第$n$项。</p>
-<h3 id="矩阵运算"><a href="#矩阵运算" class="headerlink" title="矩阵运算"></a>矩阵运算</h3><h4 id="矩阵与数字的运算"><a href="#矩阵与数字的运算" class="headerlink" title="矩阵与数字的运算"></a>矩阵与数字的运算</h4><p>直接用矩阵的每一个数字加减乘除矩阵外的数字即可。</p>
-<h4 id="矩阵加减法"><a href="#矩阵加减法" class="headerlink" title="矩阵加减法"></a>矩阵加减法</h4><p>设矩阵$A$有$a$行$b$列，矩阵$B$有$c$行$d$列，则仅当满足$a=c$且$b=d$时，两个矩阵才可以相加减。</p>
-<p>设运算得到的矩阵为$C$，则$c_{ij} = a_{ij} \pm b_{ij}$。这里的$\pm$对应了矩阵的加减。</p>
-<p>矩阵的加法满足交换律和结合律。</p>
-<h4 id="矩阵乘法"><a href="#矩阵乘法" class="headerlink" title="矩阵乘法"></a>矩阵乘法</h4><p>设矩阵$A$有$a$行$b$列，矩阵$B$有$c$行$d$列，则仅当满足$b=c$时，两个矩阵才可以相乘。</p>
-<p>设运算得到的矩阵为$C$，则$c_{ij} = \sum\limits_{k = 1}^{b}a_{ik}\times b_{kj}$。C为$a\times d$大小的矩阵。</p>
-<p>矩阵乘法不满足交换律，但满足结合律。</p>
-<h4 id="矩阵快速幂"><a href="#矩阵快速幂" class="headerlink" title="矩阵快速幂"></a>矩阵快速幂</h4><p>由于矩阵乘法满足结合律，我们就可以和数字的快速幂一样，用$O(logk)$的复杂度求出矩阵的$k$次方幂。</p>
-<p>需要注意的是，矩阵的幂运算要求矩阵的行列数相等。</p>
-<p>下面是矩阵快速幂的部分代码示例:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">struct matrix &#123;</span><br><span class="line">    int n, m;</span><br><span class="line">    long long data[3][3];</span><br><span class="line">    matrix() &#123; memset(data, 0, sizeof(data)); &#125;</span><br><span class="line">    matrix(int nv, int mv) &#123;</span><br><span class="line">        n = nv, m = mv;</span><br><span class="line">        memset(data, 0, sizeof(data));</span><br><span class="line">    &#125;</span><br><span class="line">    void build() &#123;             //此函数将自身矩阵初始化为单位矩阵</span><br><span class="line">        for (int i = 1; i &lt;= n; i++) data[i][i] = 1;</span><br><span class="line">    &#125;</span><br><span class="line">    matrix operator * (const matrix &amp;a) const &#123;</span><br><span class="line">        matrix x = matrix(n, a.m);</span><br><span class="line">        for (int i = 1; i &lt;= x.n; i++)</span><br><span class="line">            for (int j = 1; j &lt;= x.m; j++)</span><br><span class="line">                for (int k = 1; k &lt;= m; k++)</span><br><span class="line">                    x.data[i][j] = ((data[i][k] * a.data[k][j]) % mod + x.data[i][j]) % mod;</span><br><span class="line">        return x;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line">matrix fastpow(matrix base, long long k) &#123;         //矩阵快速幂</span><br><span class="line">    matrix ans = matrix(base.n, base.m);</span><br><span class="line">    ans.build();</span><br><span class="line">    while (k) &#123;</span><br><span class="line">        if (k &amp; 1) ans = ans * base;</span><br><span class="line">        base = base * base;</span><br><span class="line">        k &gt;&gt;= 1;</span><br><span class="line">    &#125;</span><br><span class="line">    return ans;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<h3 id="矩阵加速"><a href="#矩阵加速" class="headerlink" title="矩阵加速"></a>矩阵加速</h3><p>线性递推的玄学优化版本，将$O(n)$复杂度的线性递推优化为$O(logn)$。这里之所以说是优化，是因为矩阵加速的实质也是递推，只是形式不同。</p>
-<h4 id="引例"><a href="#引例" class="headerlink" title="引例"></a>引例</h4><p>我们先来看一个非常著名的数列:斐波那契数列。在这个数列中， $F[1]=F[2]=1$ ， $F[n]=F[n-1]+F[n-2] (n\ge 3)$ 。现在要求出数列的第$n$项， $n$ 在 $long long$ 范围内。<a href="https://www.luogu.org/problemnew/show/P1962" target="_blank" rel="noopener">对应的洛谷题目</a></p>
-<p>由于$n$比较大，用$O(n)$的递推会超时。我们考虑用矩阵来表示这里的递推关系，即</p>
-<script type="math/tex; mode=display">\begin{bmatrix}F[n]\\F[n-1]\end{bmatrix}=A\times \begin{bmatrix}F[n-1]\\F[n-2]\end{bmatrix}</script><p>这里的$A$是另一个矩阵，它只能由我们推导出来。</p>
-<p>我们由$F[n]=1\times F[n-1]+1\times F[n-2]$，$F[n-1]=1\times F[n-1]+0\times F[n-2]$得出</p>
-<script type="math/tex; mode=display">A=\begin{bmatrix}1&1\\1&0\end{bmatrix}</script><p>我们可以发现，每进行一次$A\times \begin{bmatrix}F[n-1]\\F[n-2]\end{bmatrix}$，我们当前递推到的下标值都会加1，因此我们只需要算出$A^{n-2}\times \begin{bmatrix}F[n-1]\\F[n-2]\end{bmatrix}$对应的矩阵，取这个矩阵中的$F[n]$值，就得到了问题的答案。我们可以先用矩阵快速幂算出$A^{n-2}$，再和$\begin{bmatrix}F[n-1]\\F[n-2]\end{bmatrix}$乘一下就可以了。</p>
-<p>这是本题的代码:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;cstdio&gt;</span><br><span class="line">#include&lt;cstring&gt;</span><br><span class="line">using namespace std;</span><br><span class="line"></span><br><span class="line">const int MOD = 1e9 + 7;</span><br><span class="line">long long n;</span><br><span class="line">struct matrix &#123;</span><br><span class="line">    int n, m;</span><br><span class="line">    long long data[3][3];</span><br><span class="line">    matrix() &#123; memset(data, 0, sizeof(data)); &#125;</span><br><span class="line">    matrix(int nv, int mv) &#123;</span><br><span class="line">        n = nv, m = mv;</span><br><span class="line">        memset(data, 0, sizeof(data));</span><br><span class="line">    &#125;</span><br><span class="line">    void build() &#123;</span><br><span class="line">        for (int i = 1; i &lt;= n; i++) data[i][i] = 1;</span><br><span class="line">    &#125;</span><br><span class="line">    matrix operator * (const matrix &amp;a) const &#123;</span><br><span class="line">        matrix x = matrix(n, a.m);</span><br><span class="line">        for (int i = 1; i &lt;= x.n; i++)</span><br><span class="line">            for (int j = 1; j &lt;= x.m; j++)</span><br><span class="line">                for (int k = 1; k &lt;= m; k++)</span><br><span class="line">                    x.data[i][j] = ((data[i][k] * a.data[k][j]) % MOD + x.data[i][j]) % MOD;</span><br><span class="line">        return x;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;A;</span><br><span class="line"></span><br><span class="line">matrix fastpow(matrix a, long long k) &#123;</span><br><span class="line">    matrix ans = matrix(a.n, a.m), base = a;</span><br><span class="line">    ans.build();</span><br><span class="line">    while (k) &#123;</span><br><span class="line">        if (k &amp; 1) ans = ans * base;</span><br><span class="line">        base = base * base;</span><br><span class="line">        k &gt;&gt;= 1;</span><br><span class="line">    &#125;</span><br><span class="line">    return ans;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">int main() &#123;</span><br><span class="line">    A.n = A.m = 2;</span><br><span class="line">    A.data[1][1] = A.data[1][2] = A.data[2][1] = 1;</span><br><span class="line">    scanf(&quot;%lld&quot;, &amp;n);</span><br><span class="line">    if (n &lt;= 2) printf(&quot;%d\n&quot;, 1);</span><br><span class="line">    else &#123;</span><br><span class="line">        matrix base = matrix(2, 1);</span><br><span class="line">        base.data[1][1] = base.data[2][1] = 1;</span><br><span class="line">        matrix ans = fastpow(A, n - 2) * base;</span><br><span class="line">        printf(&quot;%lld\n&quot;, ans.data[1][1]);</span><br><span class="line">    &#125;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<script type="math/tex; mode=display">\large\texttt{剩下的内容咕咕咕}</script>
+        <p>同余即余数相同，同余问题是$OI$中比较常见的问题。</p>
+<h3 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h3><h4 id="整除"><a href="#整除" class="headerlink" title="整除"></a>整除</h4><p>假设有两个整数$a$和$b$，且满足$ka = b (k \in Z)$，则称$b$整除$a$，记为$a | b$。</p>
+<h4 id="取模"><a href="#取模" class="headerlink" title="取模"></a>取模</h4><p>模数也就是余数。整数$a$除以整数$b$的余数记为$a \bmod b$。</p>
+<h4 id="同余"><a href="#同余" class="headerlink" title="同余"></a>同余</h4><p>若$a\bmod m = b\bmod m$，则$a$与$b$在模$m$意义下同余，记为$a \equiv b \pmod m$。</p>
+<h4 id="模运算"><a href="#模运算" class="headerlink" title="模运算"></a>模运算</h4><p>几个关于模运算的性质:</p>
+<script type="math/tex; mode=display">a\equiv b\pmod m\text{仅当}m | a-b</script><script type="math/tex; mode=display">a\equiv a+b\pmod m</script><script type="math/tex; mode=display">a\equiv a*b\pmod m</script><p>以上公式均满足$a,b,m\in Z$。</p>
+<h3 id="扩展欧几里得算法-exgcd"><a href="#扩展欧几里得算法-exgcd" class="headerlink" title="扩展欧几里得算法(exgcd)"></a>扩展欧几里得算法(exgcd)</h3><p>扩展欧几里得算法可以用来求解不定方程$ax+by=\gcd(a,b)$，其中$a$和$b$是已知的。且$a,b,x,y\in Z$。</p>
+<h4 id="算法原理"><a href="#算法原理" class="headerlink" title="算法原理"></a>算法原理</h4><p><del>证明过程暂时咕咕</del></p>
+<h4 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">void exgcd(int a, int b, int &amp;d, int &amp;x, int &amp;y) &#123;</span><br><span class="line">    if (!b) d = a, x = 1, y = 0;</span><br><span class="line">    else &#123;</span><br><span class="line">      exgcd(b, a % b, d, y, x);</span><br><span class="line">      y -= x * (a / b);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h4><p>可以用来解同余方程。对于$ax\equiv b\pmod m$，它等价于$ax+my=b$，这个不定方程正好和扩展欧几里得算法求解的不定方程形式相同，因此我们考虑用此算法求解。</p>
+<p>用$exgcd$求出方程$ax+my=\gcd(a,m)$的解，然后我们考虑如何将其转为方程$ax+my=b$。根据我们之前讲到的一个性质，我们在方程左右同时乘$\frac{b}{\gcd(a,m)}$，方程仍然成立，而右边的$\gcd(a,m)$则变为了$b$，于是我们轻而易举得到了方程$\frac{axb}{\gcd(a,m)}+\frac{myb}{\gcd(a,m)}的整数解$。这里的$\frac{axb}{\gcd(a,m)}$和$\frac{myb}{\gcd(a,m)}$就是我们要求的其中一组解。</p>
+<p>需要注意的是，如果$\gcd(a,m) | b$不成立，则没有上述求解过程，该方程无整数解。反之则有无数组整数解。</p>
+<p>现在我们仅仅是求出了任意的一组解，并不能满足题目的某些要求，比如要求出该方程的最小正整数解，我们直接输出算法求出的解很可能不能满足要求。假设我们已经求出了方程$ax+my=b的一组解，$要在调整解的同时保持方程成立，我们可以用$\frac{m}{\gcd(a,m)}来调整$x$的值，用$\frac{a}{\gcd(a,m)}$来调整$y$的值。</p>
+<h3 id="扩展中国剩余定理-excrt"><a href="#扩展中国剩余定理-excrt" class="headerlink" title="扩展中国剩余定理(excrt)"></a>扩展中国剩余定理(excrt)</h3>
       
     </div>
 
@@ -516,7 +515,9 @@
           
             <a href="/tags/OI/" rel="tag"><i class="fa fa-tag"></i> OI</a>
           
-            <a href="/tags/数学/" rel="tag"><i class="fa fa-tag"></i> 数学</a>
+            <a href="/tags/数论/" rel="tag"><i class="fa fa-tag"></i> 数论</a>
+          
+            <a href="/tags/同余/" rel="tag"><i class="fa fa-tag"></i> 同余</a>
           
         </div>
       
@@ -529,8 +530,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/05/新技巧-数组平移/" rel="next" title="dp:数组平移">
-                <i class="fa fa-chevron-left"></i> dp:数组平移
+              <a href="/2019/06/矩阵加速/" rel="next" title="矩阵加速(数列)">
+                <i class="fa fa-chevron-left"></i> 矩阵加速(数列)
               </a>
             
           </div>
@@ -538,10 +539,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/06/同余问题/" rel="prev" title="同余问题">
-                同余问题 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -752,7 +749,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#基本概念"><span class="nav-number">1.</span> <span class="nav-text">基本概念</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#矩阵运算"><span class="nav-number">2.</span> <span class="nav-text">矩阵运算</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#矩阵与数字的运算"><span class="nav-number">2.1.</span> <span class="nav-text">矩阵与数字的运算</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#矩阵加减法"><span class="nav-number">2.2.</span> <span class="nav-text">矩阵加减法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#矩阵乘法"><span class="nav-number">2.3.</span> <span class="nav-text">矩阵乘法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#矩阵快速幂"><span class="nav-number">2.4.</span> <span class="nav-text">矩阵快速幂</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#矩阵加速"><span class="nav-number">3.</span> <span class="nav-text">矩阵加速</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#引例"><span class="nav-number">3.1.</span> <span class="nav-text">引例</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#基本概念"><span class="nav-number">1.</span> <span class="nav-text">基本概念</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#整除"><span class="nav-number">1.1.</span> <span class="nav-text">整除</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#取模"><span class="nav-number">1.2.</span> <span class="nav-text">取模</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#同余"><span class="nav-number">1.3.</span> <span class="nav-text">同余</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#模运算"><span class="nav-number">1.4.</span> <span class="nav-text">模运算</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#扩展欧几里得算法-exgcd"><span class="nav-number">2.</span> <span class="nav-text">扩展欧几里得算法(exgcd)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#算法原理"><span class="nav-number">2.1.</span> <span class="nav-text">算法原理</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#代码实现"><span class="nav-number">2.2.</span> <span class="nav-text">代码实现</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#应用"><span class="nav-number">2.3.</span> <span class="nav-text">应用</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#扩展中国剩余定理-excrt"><span class="nav-number">3.</span> <span class="nav-text">扩展中国剩余定理(excrt)</span></a></li></ol></div>
             
 
           </div>
