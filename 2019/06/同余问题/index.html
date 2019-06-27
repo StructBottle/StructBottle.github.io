@@ -126,18 +126,18 @@
 
 
 
-  <meta name="description" content="同余即余数相同。同余问题是$OI$中比较常见的问题。 基本概念整除假设有两个整数$a$和$b$，且满足$ka = b (k \in Z)$，则称$b$整除$a$，记为$a | b$。 取模模数也就是余数。整数$a$除以整数$b$的余数记为$a \bmod b$。 另一种形式的定义是:若$a=kb+r(a,k,b,r\in Z)$，则$a \bmod b=r$。 根据定义，我们可以得出$a\bmod">
+  <meta name="description" content="同余即余数相同。同余问题是$OI$中比较常见的问题。 基本概念整除假设有两个整数$a$和$b$，且满足$ka = b (k \in Z)$，则称$b$整除$a$，记为$a | b$。 取模模数也就是余数。整数$a$除以整数$b$的余数记为$a \bmod b$。 另一种形式的定义是:若$a=kb+r(a\ge b, a,k,b,r\in Z)$，则$a \bmod b=r$。 根据定义，我们可以得">
 <meta name="keywords" content="OI,数学,数论,同余">
 <meta property="og:type" content="article">
 <meta property="og:title" content="同余问题">
 <meta property="og:url" content="http://inspiral.coding.me/2019/06/同余问题/index.html">
 <meta property="og:site_name" content="Blog">
-<meta property="og:description" content="同余即余数相同。同余问题是$OI$中比较常见的问题。 基本概念整除假设有两个整数$a$和$b$，且满足$ka = b (k \in Z)$，则称$b$整除$a$，记为$a | b$。 取模模数也就是余数。整数$a$除以整数$b$的余数记为$a \bmod b$。 另一种形式的定义是:若$a=kb+r(a,k,b,r\in Z)$，则$a \bmod b=r$。 根据定义，我们可以得出$a\bmod">
+<meta property="og:description" content="同余即余数相同。同余问题是$OI$中比较常见的问题。 基本概念整除假设有两个整数$a$和$b$，且满足$ka = b (k \in Z)$，则称$b$整除$a$，记为$a | b$。 取模模数也就是余数。整数$a$除以整数$b$的余数记为$a \bmod b$。 另一种形式的定义是:若$a=kb+r(a\ge b, a,k,b,r\in Z)$，则$a \bmod b=r$。 根据定义，我们可以得">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-06-27T14:52:36.957Z">
+<meta property="og:updated_time" content="2019-06-27T14:54:46.536Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="同余问题">
-<meta name="twitter:description" content="同余即余数相同。同余问题是$OI$中比较常见的问题。 基本概念整除假设有两个整数$a$和$b$，且满足$ka = b (k \in Z)$，则称$b$整除$a$，记为$a | b$。 取模模数也就是余数。整数$a$除以整数$b$的余数记为$a \bmod b$。 另一种形式的定义是:若$a=kb+r(a,k,b,r\in Z)$，则$a \bmod b=r$。 根据定义，我们可以得出$a\bmod">
+<meta name="twitter:description" content="同余即余数相同。同余问题是$OI$中比较常见的问题。 基本概念整除假设有两个整数$a$和$b$，且满足$ka = b (k \in Z)$，则称$b$整除$a$，记为$a | b$。 取模模数也就是余数。整数$a$除以整数$b$的余数记为$a \bmod b$。 另一种形式的定义是:若$a=kb+r(a\ge b, a,k,b,r\in Z)$，则$a \bmod b=r$。 根据定义，我们可以得">
 
 
 
@@ -413,7 +413,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-06-27 22:52:36" itemprop="dateModified" datetime="2019-06-27T22:52:36+08:00">2019-06-27</time>
+                <time title="修改时间：2019-06-27 22:54:46" itemprop="dateModified" datetime="2019-06-27T22:54:46+08:00">2019-06-27</time>
               
             
           </span>
@@ -492,11 +492,11 @@
         <p>同余即余数相同。同余问题是$OI$中比较常见的问题。</p>
 <h3 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h3><h4 id="整除"><a href="#整除" class="headerlink" title="整除"></a>整除</h4><p>假设有两个整数$a$和$b$，且满足$ka = b (k \in Z)$，则称$b$整除$a$，记为$a | b$。</p>
 <h4 id="取模"><a href="#取模" class="headerlink" title="取模"></a>取模</h4><p>模数也就是余数。整数$a$除以整数$b$的余数记为$a \bmod b$。</p>
-<p>另一种形式的定义是:若$a=kb+r(a,k,b,r\in Z)$，则$a \bmod b=r$。</p>
+<p>另一种形式的定义是:若$a=kb+r(a\ge b, a,k,b,r\in Z)$，则$a \bmod b=r$。</p>
 <p>根据定义，我们可以得出$a\bmod b=a-\left\lfloor\frac{a}{b}\right\rfloor\times b$。</p>
 <h4 id="同余"><a href="#同余" class="headerlink" title="同余"></a>同余</h4><p>若$a\bmod m = b\bmod m$，则$a$与$b$在模$m$意义下同余，记为$a \equiv b \pmod m$。</p>
 <h4 id="模运算"><a href="#模运算" class="headerlink" title="模运算"></a>模运算</h4><p>以下列出几个关于模运算的性质:</p>
-<script type="math/tex; mode=display">a\bmod b=a-\left\lfloor\frac{a}{b}\right\rfloor\times b</script><script type="math/tex; mode=display">a\equiv b\pmod m\Leftrightarrow m | a-b</script><script type="math/tex; mode=display">a\equiv a+b\pmod m</script><script type="math/tex; mode=display">a\equiv a*b\pmod m</script><p>以上公式均满足$a,b,m\in Z$。</p>
+<script type="math/tex; mode=display">a\bmod b=a-\left\lfloor\frac{a}{b}\right\rfloor\times b</script><script type="math/tex; mode=display">a\equiv b\pmod m\Leftrightarrow m\ |\ a-b</script><script type="math/tex; mode=display">a\equiv a+b\pmod m</script><script type="math/tex; mode=display">a\equiv a\times b\pmod m</script><p>以上公式均满足$a,b,m\in Z$。</p>
 <h3 id="欧几里得算法-gcd"><a href="#欧几里得算法-gcd" class="headerlink" title="欧几里得算法(gcd)"></a>欧几里得算法(gcd)</h3><h4 id="算法原理"><a href="#算法原理" class="headerlink" title="算法原理"></a>算法原理</h4><h5 id="求证"><a href="#求证" class="headerlink" title="求证"></a>求证</h5><p>$\gcd(a,b)=\gcd(b,a\bmod b)$</p>
 <h5 id="证明"><a href="#证明" class="headerlink" title="证明"></a>证明</h5><p>当$a\le b$时，我们直接把$a$和$b$的值交换，将其转为$a\ge b$的情况。</p>
 <p>当$a\ge b$时，有</p>
