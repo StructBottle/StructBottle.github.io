@@ -126,14 +126,18 @@
 
 
 
-  <meta property="og:type" content="article">
-<meta property="og:title" content="欧拉定理">
+  <meta name="description" content="欧拉定理当$a$与$m$互质时，$a^{\varphi(m)}\equiv 1\pmod{m}$ 证明设m的缩系为$R=\{x_1,x_2,…,x_{\varphi(m)}\}$ 另一个集合$S=\{p_i|p_i=a\times x_i,1\le i\le \varphi(m),i\in Z\}$ 需要证明以下两个结论。  $p_i!\not\equiv p_j\pmod{m}(1\le i,j">
+<meta name="keywords" content="OI,数论,同余">
+<meta property="og:type" content="article">
+<meta property="og:title" content="欧拉定理&amp;费马小定理">
 <meta property="og:url" content="http://inspiral.coding.me/2019/07/欧拉定理&费马小定理/index.html">
 <meta property="og:site_name" content="Blog">
+<meta property="og:description" content="欧拉定理当$a$与$m$互质时，$a^{\varphi(m)}\equiv 1\pmod{m}$ 证明设m的缩系为$R=\{x_1,x_2,…,x_{\varphi(m)}\}$ 另一个集合$S=\{p_i|p_i=a\times x_i,1\le i\le \varphi(m),i\in Z\}$ 需要证明以下两个结论。  $p_i!\not\equiv p_j\pmod{m}(1\le i,j">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-07-04T03:52:10.240Z">
+<meta property="og:updated_time" content="2019-07-04T10:29:58.124Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="欧拉定理">
+<meta name="twitter:title" content="欧拉定理&amp;费马小定理">
+<meta name="twitter:description" content="欧拉定理当$a$与$m$互质时，$a^{\varphi(m)}\equiv 1\pmod{m}$ 证明设m的缩系为$R=\{x_1,x_2,…,x_{\varphi(m)}\}$ 另一个集合$S=\{p_i|p_i=a\times x_i,1\le i\le \varphi(m),i\in Z\}$ 需要证明以下两个结论。  $p_i!\not\equiv p_j\pmod{m}(1\le i,j">
 
 
 
@@ -150,7 +154,7 @@
   };
 </script>
 
-  <title>欧拉定理 | Blog</title>
+  <title>欧拉定理&费马小定理 | Blog</title>
   
 
 
@@ -366,7 +370,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">欧拉定理
+          <h1 class="post-title" itemprop="name headline">欧拉定理&费马小定理
 
               
             
@@ -392,12 +396,41 @@
                 
               
 
-              <time title="创建时间：2019-07-04 11:52:10" itemprop="dateCreated datePublished" datetime="2019-07-04T11:52:10+08:00">2019-07-04</time>
+              <time title="创建时间：2019-07-04 11:52:10 / 修改时间：18:29:58" itemprop="dateCreated datePublished" datetime="2019-07-04T11:52:10+08:00">2019-07-04</time>
             
 
+            
+              
+
+              
             
           </span>
 
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/OI/" itemprop="url" rel="index"><span itemprop="name">OI</span></a></span>
+
+                
+                
+                  ，
+                
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/OI/数论/" itemprop="url" rel="index"><span itemprop="name">数论</span></a></span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -420,7 +453,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">0</span>
+                <span title="本文字数">870</span>
               
 
               
@@ -444,7 +477,37 @@
       
 
       
-        
+        <h3 id="欧拉定理"><a href="#欧拉定理" class="headerlink" title="欧拉定理"></a>欧拉定理</h3><p>当$a$与$m$互质时，$a^{\varphi(m)}\equiv 1\pmod{m}$</p>
+<h4 id="证明"><a href="#证明" class="headerlink" title="证明"></a>证明</h4><p>设m的缩系为$R=\{x_1,x_2,…,x_{\varphi(m)}\}$</p>
+<p>另一个集合$S=\{p_i|p_i=a\times x_i,1\le i\le \varphi(m),i\in Z\}$</p>
+<p>需要证明以下两个结论。</p>
+<ol>
+<li>$p_i!\not\equiv p_j\pmod{m}(1\le i,j\le \varphi(m),i,j\in Z)$</li>
+</ol>
+<p>假设$p_i\equiv p_j\pmod{m}$</p>
+<p>则$p_i-p_j\equiv 0\pmod{m}$</p>
+<p>$p_i-p_j=km$</p>
+<p>$a(x_i-x_j)=km$</p>
+<p>$a(x_i-x_j)\equiv 0\pmod{m}$</p>
+<p>$\gcd(a,m)=1$,则$x_i-x_j\equiv 0\pmod{m}$</p>
+<p>$x_i-x_j=km$</p>
+<p>上式显然不成立，由反证法得证。</p>
+<ol>
+<li>$p_i\bmod m$与$m$互质</li>
+</ol>
+<p>$\gcd(a,m)=1,\gcd(x_i,m)=1$</p>
+<p>$\gcd(p_i,m)=1$</p>
+<p>由欧几里得算法原理得$\gcd(p_i,m)=\gcd(p_i\bmod m,m)=1$</p>
+<p>因此得证。</p>
+<p>综上所述，$R=S$</p>
+<p>$\therefore p_1p_2…p_{\varphi(m)}\equiv x_1x_2…x_{\varphi(m)}\pmod{m}$</p>
+<p>$\therefore a^{\varphi(m)}x_1x_2…x_{\varphi(m)}\equiv x_1x_2…x_{\varphi(m)}\pmod{m}$</p>
+<p>$\therefore a^{\varphi(m)}\equiv 1\pmod{m}$</p>
+<h3 id="费马小定理"><a href="#费马小定理" class="headerlink" title="费马小定理"></a>费马小定理</h3><p>当$m$为质数时，$a^{m-1}\equiv 1\pmod{m}$</p>
+<h4 id="证明-1"><a href="#证明-1" class="headerlink" title="证明"></a>证明</h4><p>由于$m$为质数，$\varphi(m)=m-1$</p>
+<p>由欧拉定理得$a^{\varphi(m)}\equiv 1\pmod{m}$</p>
+<p>因此$a^{m-1}\equiv 1\pmod{m}$</p>
+
       
     </div>
 
@@ -464,6 +527,16 @@
     
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/OI/" rel="tag"><i class="fa fa-tag"></i> OI</a>
+          
+            <a href="/tags/数论/" rel="tag"><i class="fa fa-tag"></i> 数论</a>
+          
+            <a href="/tags/同余/" rel="tag"><i class="fa fa-tag"></i> 同余</a>
+          
+        </div>
       
 
       
@@ -527,8 +600,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -674,6 +756,23 @@
       </div>
 
       
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#欧拉定理"><span class="nav-number">1.</span> <span class="nav-text">欧拉定理</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#证明"><span class="nav-number">1.1.</span> <span class="nav-text">证明</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#费马小定理"><span class="nav-number">2.</span> <span class="nav-text">费马小定理</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#证明-1"><span class="nav-number">2.1.</span> <span class="nav-text">证明</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
 
       
         <div class="back-to-top">
@@ -710,7 +809,7 @@
     
       <span class="post-meta-item-text">总字数：</span>
     
-    <span title="总字数">19k</span>
+    <span title="总字数">20k</span>
   
 
   
@@ -853,6 +952,43 @@
   
   
 
+  
+    
+      <script type="text/x-mathjax-config">
+  
+
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+      
+      equationNumbers: {
+        autoNumber: "AMS"
+      }
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+      for (i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+  });
+</script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+<style>
+.MathJax_Display {
+  overflow: auto hidden;
+}
+</style>
+
+    
   
 
 
