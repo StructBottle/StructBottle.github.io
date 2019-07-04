@@ -126,18 +126,18 @@
 
 
 
-  <meta name="description" content="欧拉定理当$a$与$m$互质时，$a^{\varphi(m)}\equiv 1\pmod{m}$ 证明设m的缩系为$R=\{x_1,x_2,…,x_{\varphi(m)}\}$ 另一个集合$S=\{p_i|p_i=a\times x_i,1\le i\le \varphi(m),i\in Z\}$ 需要证明以下两个结论。 1.$p_i\not\equiv p_j\pmod{m}(1\le i,j">
+  <meta name="description" content="欧拉函数在所有正整数中，满足小于$m$且为质数的数的个数，称为欧拉函数，记为$\varphi(m)$。 欧拉定理当$a$与$m$互质时，$a^{\varphi(m)}\equiv 1\pmod{m}$ 证明设m的缩系为$R=\{x_1,x_2,…,x_{\varphi(m)}\}$ 另一个集合$S=\{p_i|p_i=a\times x_i\bmod m,1\le i\le \varphi(m),">
 <meta name="keywords" content="OI,数论,同余">
 <meta property="og:type" content="article">
 <meta property="og:title" content="欧拉定理&amp;费马小定理">
 <meta property="og:url" content="http://inspiral.coding.me/2019/07/欧拉定理&费马小定理/index.html">
 <meta property="og:site_name" content="Blog">
-<meta property="og:description" content="欧拉定理当$a$与$m$互质时，$a^{\varphi(m)}\equiv 1\pmod{m}$ 证明设m的缩系为$R=\{x_1,x_2,…,x_{\varphi(m)}\}$ 另一个集合$S=\{p_i|p_i=a\times x_i,1\le i\le \varphi(m),i\in Z\}$ 需要证明以下两个结论。 1.$p_i\not\equiv p_j\pmod{m}(1\le i,j">
+<meta property="og:description" content="欧拉函数在所有正整数中，满足小于$m$且为质数的数的个数，称为欧拉函数，记为$\varphi(m)$。 欧拉定理当$a$与$m$互质时，$a^{\varphi(m)}\equiv 1\pmod{m}$ 证明设m的缩系为$R=\{x_1,x_2,…,x_{\varphi(m)}\}$ 另一个集合$S=\{p_i|p_i=a\times x_i\bmod m,1\le i\le \varphi(m),">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-07-04T10:36:41.653Z">
+<meta property="og:updated_time" content="2019-07-04T15:17:03.380Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="欧拉定理&amp;费马小定理">
-<meta name="twitter:description" content="欧拉定理当$a$与$m$互质时，$a^{\varphi(m)}\equiv 1\pmod{m}$ 证明设m的缩系为$R=\{x_1,x_2,…,x_{\varphi(m)}\}$ 另一个集合$S=\{p_i|p_i=a\times x_i,1\le i\le \varphi(m),i\in Z\}$ 需要证明以下两个结论。 1.$p_i\not\equiv p_j\pmod{m}(1\le i,j">
+<meta name="twitter:description" content="欧拉函数在所有正整数中，满足小于$m$且为质数的数的个数，称为欧拉函数，记为$\varphi(m)$。 欧拉定理当$a$与$m$互质时，$a^{\varphi(m)}\equiv 1\pmod{m}$ 证明设m的缩系为$R=\{x_1,x_2,…,x_{\varphi(m)}\}$ 另一个集合$S=\{p_i|p_i=a\times x_i\bmod m,1\le i\le \varphi(m),">
 
 
 
@@ -396,7 +396,7 @@
                 
               
 
-              <time title="创建时间：2019-07-04 11:52:10 / 修改时间：18:36:41" itemprop="dateCreated datePublished" datetime="2019-07-04T11:52:10+08:00">2019-07-04</time>
+              <time title="创建时间：2019-07-04 11:52:10 / 修改时间：23:17:03" itemprop="dateCreated datePublished" datetime="2019-07-04T11:52:10+08:00">2019-07-04</time>
             
 
             
@@ -453,7 +453,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">944</span>
+                <span title="本文字数">1k</span>
               
 
               
@@ -477,9 +477,10 @@
       
 
       
-        <h3 id="欧拉定理"><a href="#欧拉定理" class="headerlink" title="欧拉定理"></a>欧拉定理</h3><p>当$a$与$m$互质时，$a^{\varphi(m)}\equiv 1\pmod{m}$</p>
+        <h3 id="欧拉函数"><a href="#欧拉函数" class="headerlink" title="欧拉函数"></a>欧拉函数</h3><p>在所有正整数中，满足小于$m$且为质数的数的个数，称为欧拉函数，记为$\varphi(m)$。</p>
+<h3 id="欧拉定理"><a href="#欧拉定理" class="headerlink" title="欧拉定理"></a>欧拉定理</h3><p>当$a$与$m$互质时，$a^{\varphi(m)}\equiv 1\pmod{m}$</p>
 <h4 id="证明"><a href="#证明" class="headerlink" title="证明"></a>证明</h4><p>设m的缩系为$R=\{x_1,x_2,…,x_{\varphi(m)}\}$</p>
-<p>另一个集合$S=\{p_i|p_i=a\times x_i,1\le i\le \varphi(m),i\in Z\}$</p>
+<p>另一个集合$S=\{p_i|p_i=a\times x_i\bmod m,1\le i\le \varphi(m),i\in Z\}$</p>
 <p>需要证明以下两个结论。</p>
 <p>1.$p_i\not\equiv p_j\pmod{m}(1\le i,j\le \varphi(m),i,j\in Z)$</p>
 <p>假设$p_i\equiv p_j\pmod{m}$</p>
@@ -762,7 +763,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#欧拉定理"><span class="nav-number">1.</span> <span class="nav-text">欧拉定理</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#证明"><span class="nav-number">1.1.</span> <span class="nav-text">证明</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#费马小定理"><span class="nav-number">2.</span> <span class="nav-text">费马小定理</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#证明-1"><span class="nav-number">2.1.</span> <span class="nav-text">证明</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#欧拉函数"><span class="nav-number">1.</span> <span class="nav-text">欧拉函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#欧拉定理"><span class="nav-number">2.</span> <span class="nav-text">欧拉定理</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#证明"><span class="nav-number">2.1.</span> <span class="nav-text">证明</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#费马小定理"><span class="nav-number">3.</span> <span class="nav-text">费马小定理</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#证明-1"><span class="nav-number">3.1.</span> <span class="nav-text">证明</span></a></li></ol></li></ol></div>
             
 
           </div>
