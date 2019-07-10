@@ -134,7 +134,7 @@
 <meta property="og:site_name" content="Blog">
 <meta property="og:description" content="数论函数定义域在正整数上的函数称为数论函数。 积性函数若$\gcd(x,y)=1$(即$x$,$y$互质)，则当f(x\times y)=f(x)\times f(y)时，我们称$f$为积性函数。 卷积$(f* g)(n)$称为函数$f$与$g$的卷积。 (f* g)(n)=\sum\limits_{\tau = -\infty}^{\infty}f(\tau)g(n-\tau)狄利克雷卷积若$f">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-07-10T00:39:31.884Z">
+<meta property="og:updated_time" content="2019-07-10T01:23:05.890Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="莫比乌斯反演">
 <meta name="twitter:description" content="数论函数定义域在正整数上的函数称为数论函数。 积性函数若$\gcd(x,y)=1$(即$x$,$y$互质)，则当f(x\times y)=f(x)\times f(y)时，我们称$f$为积性函数。 卷积$(f* g)(n)$称为函数$f$与$g$的卷积。 (f* g)(n)=\sum\limits_{\tau = -\infty}^{\infty}f(\tau)g(n-\tau)狄利克雷卷积若$f">
@@ -413,7 +413,7 @@
                 
               
 
-              <time title="创建时间：2019-07-10 07:47:06 / 修改时间：08:39:31" itemprop="dateCreated datePublished" datetime="2019-07-10T07:47:06+08:00">2019-07-10</time>
+              <time title="创建时间：2019-07-10 07:47:06 / 修改时间：09:23:05" itemprop="dateCreated datePublished" datetime="2019-07-10T07:47:06+08:00">2019-07-10</time>
             
 
             
@@ -445,7 +445,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">613</span>
+                <span title="本文字数">774</span>
               
 
               
@@ -479,8 +479,10 @@
 (-1)^{\varphi(n)}&\prod a_i=1\\
 0&otherwise\end{cases}</script><hr>
 <p>莫比乌斯函数是积性函数。</p>
-<script type="math/tex; mode=display">\mu(x\times y)=\mu(x)\times\mu(y)</script><hr>
-<script type="math/tex; mode=display">\sum\limits_{d\ |\ n}\dfrac{\mu(d)}{d}=\dfrac{\varphi(n)}{n}</script>
+<script type="math/tex; mode=display">\mu(x\times y)=\mu(x)\times\mu(y)\ \ \ \gcd(x,y)=1</script><hr>
+<script type="math/tex; mode=display">\sum\limits_{d\ |\ n}\dfrac{\mu(d)}{d}=\dfrac{\varphi(n)}{n}</script><h3 id="莫比乌斯反演"><a href="#莫比乌斯反演" class="headerlink" title="莫比乌斯反演"></a>莫比乌斯反演</h3><p>若数论函数$f$与$g$满足</p>
+<script type="math/tex; mode=display">f(n)=\sum\limits_{d\ |\ n}g(d)</script><p>则</p>
+<script type="math/tex; mode=display">g(n)=\sum\limits_{d\ |\ n}\mu(\dfrac{n}{d})f(d)=\sum\limits_{d\ |\ n}\mu(\d)f(\dfrac{n}{d})</script>
       
     </div>
 
@@ -741,7 +743,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#数论函数"><span class="nav-number">1.</span> <span class="nav-text">数论函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#积性函数"><span class="nav-number">2.</span> <span class="nav-text">积性函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#卷积"><span class="nav-number">3.</span> <span class="nav-text">卷积</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#狄利克雷卷积"><span class="nav-number">4.</span> <span class="nav-text">狄利克雷卷积</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#莫比乌斯函数"><span class="nav-number">5.</span> <span class="nav-text">莫比乌斯函数</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#定义"><span class="nav-number">5.1.</span> <span class="nav-text">定义</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#性质"><span class="nav-number">5.2.</span> <span class="nav-text">性质</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#数论函数"><span class="nav-number">1.</span> <span class="nav-text">数论函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#积性函数"><span class="nav-number">2.</span> <span class="nav-text">积性函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#卷积"><span class="nav-number">3.</span> <span class="nav-text">卷积</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#狄利克雷卷积"><span class="nav-number">4.</span> <span class="nav-text">狄利克雷卷积</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#莫比乌斯函数"><span class="nav-number">5.</span> <span class="nav-text">莫比乌斯函数</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#定义"><span class="nav-number">5.1.</span> <span class="nav-text">定义</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#性质"><span class="nav-number">5.2.</span> <span class="nav-text">性质</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#莫比乌斯反演"><span class="nav-number">6.</span> <span class="nav-text">莫比乌斯反演</span></a></li></ol></div>
             
 
           </div>
